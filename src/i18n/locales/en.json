@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
+
+  
+  "hero": {
+    "available": "Open to opportunities",
+    "role": "Fullstack / Backend Developer",
+    "bio": "Do you need more than just a «website» or an «app» — a tool that solves business problems? I handle the entire development lifecycle, from architecture design to release.",
+    "contactMe": "Contact me",
+    "viewProjects": "View projects",
+    "avatarAlt": "Portrait of Turov Andrey"
+  },
+  "opportunities":{
+    "title":"What am I doing?",
+    "subtitle":"I turn ideas into working digital products!"
+  },
+  "skills": {
+    "title": "Skills & Tech Stack",
+    "subtitle": "Technologies and practices I use day to day.",
+    "groups": {
+      "languages": "Languages",
+      "backend": "Backend",
+      "messaging": "Messaging",
+      "databases": "Databases",
+      "architecture": "Architecture",
+      "devops": "DevOps / Tools",
+      "frontend": "Frontend"
+    }
+  },
+  "experience": {
+    "title": "Experience highlights",
+    "subtitle": "My Achievements.",
+    "items": {
+      "years": {
+        "value": "5+",
+        "title": "Years of commercial experience",
+        "text": "Backend and fullstack development of production systems."
+      },
+      "fromScratch": {
+        "value": "10+",
+        "title": "Systems designed from scratch",
+        "text": "Architecture, data models, APIs and background processing built from zero."
+      },
+      "legacy": {
+        "value": "8+",
+        "title": "Legacy modules refactored",
+        "text": "Bringing legacy code up to production-grade standards with Clean Architecture and SOLID."
+      },
+      "highload": {
+        "value": "30%",
+        "title": "Performance gains on critical paths",
+        "text": "Query optimization, caching, implementation of background tasks."
+      }
+    }
+  },
+  "featured": {
+    "title": "My projects",
+    "subtitle": "Selected work that shows how I design and build systems.",
+    "viewAll": "View all projects"
+  },
+
+  "contacts": {
+    "title": "Contacts",
+    "intro": "Do you have a task to discuss? I’m open to a conversation. Tell me about your idea, and I’ll propose the best technical solution.",
+    "availability": {
+      "title": "Availability",
+      "status": "Open to new opportunities",
+      "location": "Location",
+      "timezone": "Timezone",
+      "response": "Typical response time",
+      "responseValue": "within 24 hours",
+      "languages": "Languages",
+      "languagesValue": "English (B1), Russian (native)"
+    },
+    "channels": {
+      "title": "Direct channels",
+      "email": "Email",
+      "emailHint": "Best for job offers and detailed briefs",
+      "telegram": "Telegram",
+      "telegramHint": "Quick questions and casual chats",
+      "github": "GitHub",
+      "githubHint": "Code, side projects and experiments",
+      "phone": "Phone",
+      "phoneHint": "Call or send messages in working time"
+    },
+    "form": {
+      "title": "Send a message",
+      "subtitle": "The form opens your mail client with the message pre-filled — no data is sent to any server.",
+      "name": "Your name",
+      "namePlaceholder": "Jane Doe",
+      "email": "Your email",
+      "emailPlaceholder": "jane@company.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me briefly about the role, project or question…",
+      "submit": "Open mail client",
+      "requiredHint": "Fields marked with * are required.",
+      "errorRequired": "Please fill in your name and message."
+    },
+    "copy": {
+      "copy": "Copy",
+      "copied": "Copied"
+    }
+  },
+
+  "projects": {
+    "title": "Projects",
+    "intro": "A selection of systems and products I've designed and built.",
+    "filterLabel": "Filter by technology",
+    "filterAll": "All",
+    "empty": "No projects match the selected filter.",
+    "backToProjects": "Back to projects",
+    "techStack": "Tech stack",
+    "keyContributions": "Key contributions",
+    "links": "Links",
+    "prev": "Previous project",
+    "next": "Next project",
+    "openInNewTab": "opens in a new tab"
+  },
+  "notFound": {
+    "title": "404 — Page not found",
+    "text": "The page you're looking for doesn't exist or has been moved.",
+    "back": "Back to home"
+  },
+  "footer": {
+    "builtWith": "Built with React, Vite and Tailwind CSS.",
+    "rights": "All rights reserved."
+  },
+  "a11y": {
+    "toggleMenu": "Toggle navigation menu",
+    "switchLanguage": "Switch language",
+    "openImage": "Open image in full screen",
+    "closeImage": "Close image",
+    "prevImage": "Previous image",
+    "nextImage": "Next image"
+  },
+
+  "meta": {
+    "home": {
+      "title": "Turov Andrey — Fullstack / Backend Developer",
+      "description": "Backend developer with 5 years of experience in ASP.NET Core, microservices, Kafka, RabbitMQ and PostgreSQL."
+    },
+    "projects": {
+      "title": "Projects — Turov Andrey",
+      "description": "Selected backend and fullstack projects: microservices, ASP.NET Core, PostgreSQL, Redis and more."
+    },
+    "contacts": {
+      "title": "Contacts — Turov Andrey",
+      "description": "Get in touch with Turov Andrey: email, Telegram, GitHub and mobile phone."
+    }
+  }
+}
