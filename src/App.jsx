@@ -8,6 +8,9 @@ const ProjectsPage = lazy(() => import('./components/ProjectsPage.jsx'));
 const ProjectDetailPage = lazy(() => import('./components/ProjectDetailPage.jsx'));
 const ContactsPage = lazy(() => import('./components/ContactsPage.jsx'));
 const NotFoundPage = lazy(() => import('./components/NotFoundPage.jsx'));
+export function getPath(route){
+  return `/TurovDev${route}`;
+}
 
 function RouteFallback() {
   return (
@@ -23,11 +26,11 @@ export default function App() {
       <ScrollToTop />
       <Suspense fallback={<RouteFallback />}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/:slug" element={<ProjectDetailPage />} />
-          <Route path="/contacts" element={<ContactsPage />} /> 
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path={getPath('/')} element={<HomePage />} />
+          <Route path={getPath('/projects')} element={<ProjectsPage />} />
+          <Route path={getPath('/projects/:slug')} element={<ProjectDetailPage />} />
+          <Route path={getPath('/contacts')} element={<ContactsPage />} /> 
+          <Route path={getPath('/*')} element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </Layout>

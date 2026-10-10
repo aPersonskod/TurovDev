@@ -3,6 +3,7 @@ import { Github, Phone, Mail, Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { pickLocalized } from '../utils/localize';
 import { profile } from '../data/profile';
+import { getPath } from '../App';
 
 const iconBtn =
   'rounded-lg border border-slate-800 p-2 text-slate-300 transition hover:border-slate-600 hover:text-white';
@@ -50,7 +51,7 @@ export default function Footer() {
             <Send size={18} aria-hidden="true" />
           </a>
           <Link
-            to='/contacts'
+            to={`${getPath('/contacts')}`}
             className={iconBtn}
             aria-label={t('contact.phone')}
           >

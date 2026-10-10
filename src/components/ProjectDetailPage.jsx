@@ -12,6 +12,7 @@ import useDocumentMeta from '../hooks/useDocumentMeta';
 import { projects } from '../data/projects';
 import { getProjectImages } from '../utils/projectImages';
 import { pickLocalized } from '../utils/localize';
+import { getPath } from '../App';
 
 export default function ProjectDetailPage() {
   const { slug } = useParams();
@@ -47,7 +48,7 @@ export default function ProjectDetailPage() {
     <PageTransition>
       <article className="container-page py-12 sm:py-16">
         <Link
-          to="/projects"
+          to={`${getPath('/projects')}`}
           className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-slate-400 transition hover:text-white"
         >
           <ArrowLeft size={16} aria-hidden="true" />
@@ -128,7 +129,7 @@ export default function ProjectDetailPage() {
         {/* ────────── Prev / Next navigation ────────── */}
         <nav className="mt-16 grid gap-4 border-t border-slate-800 pt-8 sm:grid-cols-2">
           <Link
-            to={`/projects/${prev.slug}`}
+            to={`${getPath(`/projects/${prev.slug}`)}`}
             className="group rounded-2xl border border-slate-800 bg-slate-900/40 p-5 transition hover:border-slate-700 hover:bg-slate-900/70"
           >
             <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
@@ -141,7 +142,7 @@ export default function ProjectDetailPage() {
           </Link>
 
           <Link
-            to={`/projects/${next.slug}`}
+            to={`${getPath(`/projects/${next.slug}`)}`}
             className="group rounded-2xl border border-slate-800 bg-slate-900/40 p-5 text-right transition hover:border-slate-700 hover:bg-slate-900/70"
           >
             <span className="flex items-center justify-end gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500">

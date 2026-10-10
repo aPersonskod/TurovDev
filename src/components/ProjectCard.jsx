@@ -4,6 +4,7 @@ import TechBadge from './TechBadge';
 import PlaceholderGradient from './PlaceholderGradient';
 import { getProjectCover } from '../utils/projectImages';
 import { pickLocalized } from '../utils/localize';
+import { getPath } from '../App';
 
 const MAX_VISIBLE_TECH = 5;
 
@@ -19,7 +20,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <Link
-      to={`/projects/${project.slug}`}
+      to={`${getPath(`/projects/${project.slug}`)}`}
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 transition duration-300 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-900/70 hover:shadow-2xl hover:shadow-indigo-500/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
     >
       <div className="relative aspect-video w-full overflow-hidden bg-slate-800">

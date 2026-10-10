@@ -2,6 +2,7 @@ import { Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { profile } from '../data/profile';
 import { Link } from 'react-router-dom';
+import { getPath } from '../App';
 
 /**
  * Filled accent CTA that opens the user's mail client with a pre-filled subject.
@@ -27,7 +28,7 @@ export default function EmailButton({ label, variant = 'primary', className = ''
       <span>{label || t('hero.contactMe')}</span>
     </a> */
     <Link
-      to='/contacts'
+      to={`${getPath('/contacts')}`}
       className={['btn', styles, className].join(' ')}
       aria-label={label || t('hero.contactMe')}
     >

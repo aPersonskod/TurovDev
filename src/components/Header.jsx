@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { profile } from '../data/profile';
+import { getPath } from '../App';
 
 const navLinkClass = ({ isActive }) =>
   [
@@ -27,7 +28,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60">
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Link
-          to="/"
+          to={`${getPath('/')}`}
           className="flex items-center gap-2 rounded-md font-semibold text-white"
           aria-label={profile.name.en}
         >
@@ -38,13 +39,13 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
-          <NavLink to="/" end className={navLinkClass}>
+          <NavLink to={`${getPath('/')}`} end className={navLinkClass}>
             {t('nav.home')}
           </NavLink>
-          <NavLink to="/projects" className={navLinkClass}>
+          <NavLink to={`${getPath('/projects')}`} className={navLinkClass}>
             {t('nav.projects')}
           </NavLink>
-          <NavLink to="/contacts" className={navLinkClass}>
+          <NavLink to={`${getPath('/contacts')}`} className={navLinkClass}>
             {t('nav.contacts')}
           </NavLink>
         </nav>
@@ -71,13 +72,13 @@ export default function Header() {
           className="border-t border-slate-800 bg-slate-950/95 md:hidden"
         >
           <div className="container-page flex flex-col py-2">
-            <NavLink to="/" end className={navLinkClass} onClick={() => setOpen(false)}>
+            <NavLink to={`${getPath('/')}`} end className={navLinkClass} onClick={() => setOpen(false)}>
               {t('nav.home')}
             </NavLink>
-            <NavLink to="/projects" className={navLinkClass} onClick={() => setOpen(false)}>
+            <NavLink to={`${getPath('/projects')}`} className={navLinkClass} onClick={() => setOpen(false)}>
               {t('nav.projects')}
             </NavLink>
-            <NavLink to="/contacts" className={navLinkClass} onClick={() => setOpen(false)}>
+            <NavLink to={`${getPath('/contacts')}`} className={navLinkClass} onClick={() => setOpen(false)}>
               {t('nav.contacts')}
             </NavLink>
           </div>

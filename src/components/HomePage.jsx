@@ -15,6 +15,7 @@ import { profile, skillGroups } from '../data/profile';
 import { projects } from '../data/projects';
 import { offeredServices } from '../data/offeredServices';
 import { pickLocalized } from '../utils/localize';
+import { getPath } from '../App';
 
 const EXPERIENCE_KEYS = ['years', 'fromScratch', 'legacy', 'highload'];
 
@@ -62,7 +63,7 @@ export default function HomePage() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <EmailButton />
-              <Link to="/projects" className="btn-ghost">
+              <Link to={`${getPath('/projects')}`} className="btn-ghost">
                 {t('hero.viewProjects')}
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
@@ -153,7 +154,7 @@ export default function HomePage() {
         <div className="mb-2 flex flex-wrap items-end justify-between gap-4">
           <SectionTitle title={t('featured.title')} subtitle={t('featured.subtitle')} />
           <Link
-            to="/projects"
+            to={`${getPath('/projects')}`}
             className="mb-8 inline-flex items-center gap-1 text-sm font-medium text-indigo-300 transition hover:text-indigo-200"
           >
             {t('featured.viewAll')}
@@ -219,7 +220,7 @@ export default function HomePage() {
             </a>
 
             <Link
-              to='/contacts'
+              to={`${getPath('/contacts')}`}
               className="btn-ghost"
             >
               <Phone size={18} aria-hidden="true" />
