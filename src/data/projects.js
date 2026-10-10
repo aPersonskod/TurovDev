@@ -57,44 +57,6 @@ export const projects = [
 
   /* ─────────────────────────── Project 2 ─────────────────────────── */
   {
-    slug: 'automated-design-platform',
-    featured: true,
-    title: {
-      en: 'Automated Design Platform (2D Editor)',
-      ru: 'Платформа автоматизированного проектирования (2D-редактор)',
-    },
-    summary: {
-      en: '2D editor with automatic equipment placement and shortest-path routing algorithms over obstacles.',
-      ru: '2D-редактор с автоматической расстановкой оборудования и алгоритмами поиска кратчайшего пути в обход препятствий.',
-    },
-    stack: [
-      'C#',
-      '.NET Framework',
-      'Graph algorithms',
-      'Matrix algorithms',
-      'Clean Architecture',
-      'SOLID',
-    ],
-    achievements: {
-      en: [
-        'Developed an algorithm for the automatic placement of equipment on the schematic, completely eliminating manual positioning and reducing drawing preparation time from several hours to a maximum of one minute.',
-        'Implemented an algorithm to find the shortest/optimal path on a schematic containing obstacles (using a wave algorithm/adjacency matrices), providing the client with a route-planning tool for installers and service engineers.',
-        'Refactored legacy module code in accordance with Clean Architecture and SOLID principles, improving testability and reducing the cost of making changes.',
-        'Broke down large epics into independent sub-tasks and managed their execution within a team of three developers.',
-      ],
-      ru: [
-        'Разработал алгоритм автоматической расстановки оборудования на схеме, полностью исключивший ручное позиционирование и сокративший время подготовки чертежа с нескольких часов до максимум одной минуты.',
-        'Реализовал алгоритм поиска кратчайшего/оптимального пути на схеме с препятствиями (волновой алгоритм/матрицы смежности), предоставив заказчику инструмент прокладки маршрутов для монтажников и сервисных инженеров.',
-        'Отрефакторил код legacy-модуля в соответствии с принципами Clean Architecture и SOLID, повысив тестируемость и снизив стоимость внесения изменений.',
-        'Декомпозировал крупные эпики на независимые подзадачи и управлял их выполнением в команде из трёх разработчиков.',
-      ],
-    },
-    links: {},
-    images: ['01.png', '02.png', '03.png', '04.png'],
-  },
-
-  /* ─────────────────────────── Project 3 ─────────────────────────── */
-  {
     slug: 'marketplace-microservices',
     featured: true,
     title: {
@@ -135,6 +97,46 @@ export const projects = [
     },
     images: ['01.png', '02.png', '03.png', '04.png'],
   },
+
+  /* ─────────────────────────── Project 3 ─────────────────────────── */
+  {
+    slug: 'automated-design-platform',
+    featured: true,
+    title: {
+      en: 'Automated Design Platform (2D Editor)',
+      ru: 'Платформа автоматизированного проектирования (2D-редактор)',
+    },
+    summary: {
+      en: '2D editor with automatic equipment placement and shortest-path routing algorithms over obstacles.',
+      ru: '2D-редактор с автоматической расстановкой оборудования и алгоритмами поиска кратчайшего пути в обход препятствий.',
+    },
+    stack: [
+      'C#',
+      '.NET Framework',
+      'Graph algorithms',
+      'Matrix algorithms',
+      'Clean Architecture',
+      'SOLID',
+    ],
+    achievements: {
+      en: [
+        'Developed an algorithm for the automatic placement of equipment on the schematic, completely eliminating manual positioning and reducing drawing preparation time from several hours to a maximum of one minute.',
+        'Implemented an algorithm to find the shortest/optimal path on a schematic containing obstacles (using a wave algorithm/adjacency matrices), providing the client with a route-planning tool for installers and service engineers.',
+        'Refactored legacy module code in accordance with Clean Architecture and SOLID principles, improving testability and reducing the cost of making changes.',
+        'Broke down large epics into independent sub-tasks and managed their execution within a team of three developers.',
+      ],
+      ru: [
+        'Разработал алгоритм автоматической расстановки оборудования на схеме, полностью исключивший ручное позиционирование и сокративший время подготовки чертежа с нескольких часов до максимум одной минуты.',
+        'Реализовал алгоритм поиска кратчайшего/оптимального пути на схеме с препятствиями (волновой алгоритм/матрицы смежности), предоставив заказчику инструмент прокладки маршрутов для монтажников и сервисных инженеров.',
+        'Отрефакторил код legacy-модуля в соответствии с принципами Clean Architecture и SOLID, повысив тестируемость и снизив стоимость внесения изменений.',
+        'Декомпозировал крупные эпики на независимые подзадачи и управлял их выполнением в команде из трёх разработчиков.',
+      ],
+    },
+    links: {},
+    images: ['01.png', '02.png', '03.png', '04.png'],
+  },
+
+  
 ];
 
 /** Convenience helper used by detail page navigation. */

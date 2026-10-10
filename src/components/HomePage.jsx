@@ -10,7 +10,7 @@ import EmailButton from '../components/EmailButton';
 import ProjectCard from '../components/ProjectCard';
 import useDocumentMeta from '../hooks/useDocumentMeta';
 
-import avatarUrl from '../assets/avatar.svg';
+import avatarUrl from '../assets/profile/avatar.png';
 import { profile, skillGroups } from '../data/profile';
 import { projects } from '../data/projects';
 import { offeredServices } from '../data/offeredServices';
@@ -41,7 +41,7 @@ export default function HomePage() {
     <PageTransition>
       {/* ────────────── HERO ────────────── */}
       <section className="relative overflow-hidden">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
           <div className="absolute -top-40 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl" />
           <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl" />
         </div>
