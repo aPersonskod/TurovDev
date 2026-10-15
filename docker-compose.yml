@@ -1,0 +1,23 @@
+﻿services:
+  frontend-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-app
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Монтируем сертификаты и конфигурацию Nginx с хоста в контейнер
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    # Эта команда будет выполнена при запуске сервиса
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"

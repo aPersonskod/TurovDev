@@ -9,7 +9,7 @@ const ProjectDetailPage = lazy(() => import('./components/ProjectDetailPage.jsx'
 const ContactsPage = lazy(() => import('./components/ContactsPage.jsx'));
 const NotFoundPage = lazy(() => import('./components/NotFoundPage.jsx'));
 export function getPath(route){
-  return `/TurovDev${route}`;
+  return `${route}`; // /TurovDev
 }
 
 function RouteFallback() {
