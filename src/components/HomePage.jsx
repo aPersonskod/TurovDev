@@ -16,6 +16,7 @@ import { projects } from '../data/projects';
 import { offeredServices } from '../data/offeredServices';
 import { pickLocalized } from '../utils/localize';
 import { getPath } from '../App';
+import AdsComponent from "./AdsComponent.jsx";
 
 const EXPERIENCE_KEYS = ['years', 'fromScratch', 'legacy', 'highload'];
 
@@ -126,25 +127,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ────────────── Ads ────────────── */}
+      <section className="container-page py-16 sm:py-20">
+        <div className="grid gap-4">
+          <div
+              key='ads_key'
+              className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 transition hover:-translate-y-0.5 hover:border-slate-700 hover:bg-slate-900/70"
+          >
+            <AdsComponent/>
+          </div>
+        </div>
+      </section>
+
       {/* ────────────── EXPERIENCE HIGHLIGHTS ────────────── */}
       <section className="container-page py-16 sm:py-20">
-        <SectionTitle title={t('experience.title')} subtitle={t('experience.subtitle')} />
+        <SectionTitle title={t('experience.title')} subtitle={t('experience.subtitle')}/>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {EXPERIENCE_KEYS.map((key) => (
-            <div
-              key={key}
-              className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 transition hover:-translate-y-0.5 hover:border-slate-700 hover:bg-slate-900/70"
-            >
-              <p className="text-3xl font-extrabold text-indigo-400">
-                {t(`experience.items.${key}.value`)}
-              </p>
-              <h3 className="mt-2 text-sm font-semibold text-white">
-                {t(`experience.items.${key}.title`)}
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-slate-400">
-                {t(`experience.items.${key}.text`)}
-              </p>
-            </div>
+              <div
+                  key={key}
+                  className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 transition hover:-translate-y-0.5 hover:border-slate-700 hover:bg-slate-900/70"
+              >
+                <p className="text-3xl font-extrabold text-indigo-400">
+                  {t(`experience.items.${key}.value`)}
+                </p>
+                <h3 className="mt-2 text-sm font-semibold text-white">
+                  {t(`experience.items.${key}.title`)}
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-slate-400">
+                  {t(`experience.items.${key}.text`)}
+                </p>
+              </div>
           ))}
         </div>
       </section>
@@ -152,7 +165,7 @@ export default function HomePage() {
       {/* ────────────── FEATURED PROJECTS ────────────── */}
       <section className="container-page py-16 sm:py-20">
         <div className="mb-2 flex flex-wrap items-end justify-between gap-4">
-          <SectionTitle title={t('featured.title')} subtitle={t('featured.subtitle')} />
+          <SectionTitle title={t('featured.title')} subtitle={t('featured.subtitle')}/>
           <Link
             to={`${getPath('/projects')}`}
             className="mb-8 inline-flex items-center gap-1 text-sm font-medium text-indigo-300 transition hover:text-indigo-200"

@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import Reports from "./components/Reports.jsx";
 import {createViewRequest} from './api/reports';
+import AdsPage from "./components/AdsPage.jsx";
 
 const HomePage = lazy(() => import('./components/HomePage.jsx'));
 const ProjectsPage = lazy(() => import('./components/ProjectsPage.jsx'));
@@ -64,6 +65,7 @@ export default function App() {
           <Route path={getPath('/projects')} element={<ProjectsPage />} />
           <Route path={getPath('/projects/:slug')} element={<ProjectDetailPage />} />
           <Route path={getPath('/contacts')} element={<ContactsPage />} /> 
+          <Route path={getPath('/ads')} element={<AdsPage />} /> 
           <Route path={getPath('/reports/attendance')} element={<Reports />} /> 
           <Route path={getPath('/*')} element={<NotFoundPage />} />
         </Routes>
