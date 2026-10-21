@@ -33,7 +33,7 @@
     restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password  # CHANGE IN PROD and appsettings !!!!!!!!!!!!!!!
+      POSTGRES_PASSWORD: password  # todo CHANGE IN PROD and appsettings !!!!!!!!!!!!!!!
       POSTGRES_DB: turoff_attendance_db
     volumes:
       - postgres_data:/var/lib/postgresql/18/data
