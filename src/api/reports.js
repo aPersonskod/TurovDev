@@ -2,9 +2,11 @@
 const API_URL = import.meta.env.VITE_API_URL ?? '/api/reports';
 const Host = 'localhost';
 const Port = '7059';
+const ProdHost = 'localhost';
+const ProdPort = '8080';
 const devAddress = `https://${Host}:${Port}/api/attendance-report`;
-const productionAddress = `https://${Host}:${Port}/api/attendance-report`;
-export const BaseAddress = devAddress;
+const productionAddress = `http://${ProdHost}:${ProdPort}/api/attendance-report`;
+export const BaseAddress = productionAddress; // todo need to change in debug
 
 // Set VITE_USE_MOCK=false in .env to hit the real backend
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false';

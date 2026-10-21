@@ -133,10 +133,13 @@ export default function Reports() {
                 {error && <p className="reports__error">{error}</p>}
 
                 {!loading && !error && report && (
-                    <DonutChart
-                        entries={report.reportEntries}
-                        totalViews={report.totalViews}
-                    />
+                    <div>
+                        <h3>From: {new Date(report.startDate).toLocaleDateString('ru-RU')}</h3>
+                        <DonutChart
+                            entries={report.reportEntries}
+                            totalViews={report.totalViews}
+                        />
+                    </div>
                 )}
             </section>
         </div>

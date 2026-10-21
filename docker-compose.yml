@@ -13,11 +13,48 @@
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
+        
+  backend-api:
+    build:
+      context: ./SiteAttendanceProj/SiteAttendance.Api
+      dockerfile: Dockerfile
+    container_name: turoff-api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "https://+:8081;http://+:8080"
+    depends_on:
+      postgres_attendance:
+        condition: service_healthy
+
+  postgres_attendance:
+    image: postgres:latest
+    container_name: turoff-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password  # CHANGE IN PROD and appsettings !!!!!!!!!!!!!!!
+      POSTGRES_DB: turoff_attendance_db
     volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    # Эта команда будет выполнена при запуске сервиса
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+      - postgres_data:/var/lib/postgresql/18/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # ports:
+    #   - "5432:5432"   # ❌ НЕ публикуем наружу
+
+volumes:
+  postgres_data:        # именованный том — данные переживут пересоздание контейнера
+  
+  
+  
+#  certbot:
+#    image: certbot/certbot
+#    container_name: certbot
+#    volumes:
+#      - ./certbot/conf:/etc/letsencrypt
+#      - ./certbot/www:/var/www/certbot
+#    # Эта команда будет выполнена при запуске сервиса
+#    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
