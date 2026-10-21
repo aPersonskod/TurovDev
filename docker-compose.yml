@@ -16,8 +16,8 @@
         
   backend-api:
     build:
-      context: ./SiteAttendanceProj/SiteAttendance.Api
-      dockerfile: Dockerfile
+      context: ./SiteAttendanceProj
+      dockerfile: SiteAttendance.Api/Dockerfile
     container_name: turoff-api
     restart: unless-stopped
     environment:
