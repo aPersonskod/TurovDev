@@ -22,7 +22,7 @@
     restart: unless-stopped
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
-      ASPNETCORE_URLS: "https://+:8081;http://+:8080"
+      ASPNETCORE_URLS: "http://+:8080"
     depends_on:
       postgres_attendance:
         condition: service_healthy
