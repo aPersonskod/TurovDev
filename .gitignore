@@ -35,6 +35,7 @@ bower_components
 # node-modules (Dependencies)
 node_modules/
 jspm_packages/
+certbot/
 
 # Snowpack dependency directory
 web_modules/
